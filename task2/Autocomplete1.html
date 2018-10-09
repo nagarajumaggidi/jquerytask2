@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>auto complete</title>
+    
+</head>
+<body>
+    course:
+    <input type="text" id="name">
+    
+</body>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+ 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    
+    <script>
+    
+    $(document).ready(function(){
+          var a=["java","oracle","sql","php","html","css","javascript","jquery","boostarp",".net","c","c++"];
+         var b=["a","b","d","g"];
+         $("#name").autocomplete({
+source:a,source:b             
+         });  
+         
+        });
+   
+    </script>
+
+
+</html>

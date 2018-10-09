@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>auto complete</title>
+    
+</head>
+<body>
+    course:
+    <input type="text" id="name">
+    
+</body>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+ 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+    <script src="https://www.google.com/maps/@17.456112,78.3585002,15z"></script>
+    <script>
+    
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      $(document).on("click", "#id_street, #id_zipcode, #id_city, #id_country", function(event){
+        if ($("#id_street").val() && $("#id_zipcode").val() && $("#id_city").val() && $("#id_country").val()){
+          $("#location-mw-google-address-input").val($("#id_street").val() + ", " + $("#id_zipcode").val() + " " + $("#id_city").val() + ", " + $("#id_country option:selected").text())
+        }
+      });
+    });
+
+   
+    </script>
+
+
+</html>

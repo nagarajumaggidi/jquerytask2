@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <style>
+        *{
+  margin:0px;
+  padding: 0px;
+}
+
+#rowButton{
+  background-color:darkseagreen ;
+  width: 200px;
+  margin-left: 40px;
+  border-color: #fff;
+  border-width: 1px;
+}
+
+#columnButton{
+  background-color:darkseagreen;
+  width: 200px;
+  border-color: #fff;
+  border-width: 1px;
+}
+        
+        
+        </style>
+    </head>
+    <body>
+    <table id="main">
+
+   
+    <tr class="alt" id="row">
+        <td><input type="text" placeholder="Enter Value"></td>
+        <td><input type="text" placeholder="Enter Value"></td>
+        <td><input type="text" placeholder="Enter Value"></td>
+        
+    </tr>
+    <tr>
+        <td><input type="text" placeholder="Enter Value"></td>
+        <td><input type="text" placeholder="Enter Value"></td>
+        <td><input type="text" placeholder="Enter Value"></td>
+       
+    </tr>
+ 
+
+
+</table>
+<input type="button" value="Add New Row" onclick="addRow();" id="rowButton" />
+
+    
+    
+    </body>
+    <script>
+    function addRow() {
+    var table = document.getElementById("main");
+	var rws = table.rows;
+	var cols = table.rows[0].cells.length;
+    var row = table.insertRow(rws.length);
+	var cell;
+	for(var i=0;i<cols;i++){
+		cell = row.insertCell(i);
+		cell.innerHTML = '<input type="text" placeholder="Enter Value">';
+	}
+}
+    
+    
+    
+    </script>
+</html>
